@@ -30,7 +30,6 @@ Notes:
 #p = subprocess.run(['ls', '-la'], capture_output=True, text=True)
 #print(p.stdout)
 
-
 subprocess.run("ifconfig | grep broadcast | awk '{print $2}' ",shell=True)
 
 
