@@ -6,6 +6,7 @@ import concurrent.futures
 """
 Description
 	Python 3.8.5 
+	The program executes a wait for a second function using threads in a for loop`10 times
 
 Notes:
 	CPU bound processes => use multiprocessing (alot of computation like math)
@@ -14,11 +15,17 @@ Notes:
 	
 Test case:
 	Intel(R) Core(TM) i3-4005U CPU @ 1.70GHz
+	On-line CPU(s) list:             0-3
+	Thread(s) per core:              2
 	20.04.2 LTS (Focal Fossa)
 	
 	using the thread pool method of threading, with a for loop of 9>= the 
 	process will execute in more than a second while using the threading module
-	will execute in a ~1 with 10 iterations
+	will execute in a ~1 even with 10 iterations
+
+Conclussion:
+	seems like for thread pool method, it uses the 8 hardware threads
+	but the threading module works somehow different as it can execute more than 8 threads.
 	
 """
 
